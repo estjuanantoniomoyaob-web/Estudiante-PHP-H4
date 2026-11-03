@@ -8,7 +8,7 @@ getters/setters) y **tipos estrictos** (`declare(strict_types=1);`).
 
 ## Requisitos
 - XAMPP con Apache y PHP 8.1 o superior
-  Link de descarga de XAMPP: `https://www.apachefriends.org/download.html`
+  link de descarga de XAMPP: `https://www.apachefriends.org/download.html`
 - Navegador web 
 
 ## Instalación y ejecución en XAMPP
@@ -41,17 +41,17 @@ Respuesta:
 
 POST: registrar
 Campos requeridos: `codigo`, `nombre`, `apellido`, `edad`, `carrera`.
-Ejemplo de registro 1
+Ejemplo de registro POST 1
 ```
-curl -X POST http://localhost/estudiantes-php/api.php -H "Content-Type: application/json" -d "{\"codigo\":\"12402345\",\"nombre\":\"Jessica Dabeyba\",\"apellido\":\"Pérez Chura\",\"edad\":19,\"carrera\":\"Comercio Internacional\"}"
+curl -i -X POST http://localhost/estudiantes-php/api.php -H "Content-Type: application/json" -d "{\"codigo\":\"12402345\",\"nombre\":\"Jessica Dabeyba\",\"apellido\":\"Pérez Chura\",\"edad\":19,\"carrera\":\"Comercio Internacional\"}"
 ```
 GET:consultar por el código del estudiante 
 ```
 http://localhost/estudiantes-php/api.php?codigo=12402345
 ```
-Ejemplo de registro 2
+Ejemplo de registro POST 2
 ```
-curl -X POST http://localhost/estudiantes-php/api.php -H "Content-Type: application/json" -d "{\"codigo\":\"10403242\",\"nombre\":\"Andy Jhulian\",\"apellido\":\"Morales Paredes\",\"edad\":20,\"carrera\":\"Ingenieria Civil\"}"
+curl -i -X POST http://localhost/estudiantes-php/api.php -H "Content-Type: application/json" -d "{\"codigo\":\"10403242\",\"nombre\":\"Andy Jhulian\",\"apellido\":\"Morales Paredes\",\"edad\":20,\"carrera\":\"Ingenieria Civil\"}"
 ```
 GET: consultar por el código del estudiante 
 ```
@@ -63,4 +63,8 @@ http://localhost/estudiantes-php/api.php
 ```
 
 ## Formulario web
-Abrir el navegador a `http://localhost/estudiantes-php/` y completar los campos y pulsar **Registrar (POST)**. El registro se guardar y se tendrá una vista de registro recién echo y el botón **Consultar (GET)** actualiza la tabla al buscar un estudiante por su codigo.
+Abrir el navegador a 
+```
+http://localhost/estudiantes-php/
+```
+Completar los campos y pulsar **Registrar (POST)**. El registro se guardar y se tendrá una vista de registro recién echo y el botón **Consultar (GET)** actualiza la tabla al buscar un estudiante por su codigo.
